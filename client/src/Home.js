@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import AuthContext from './utils/AuthContext';
 import axios from "axios";
@@ -7,20 +7,6 @@ export default function Home() {
 
     const history = useHistory();
     const { getLoggedIn } = useContext(AuthContext);
-
-    const [switcher, setSwitcher] = useState("Login");
-
-    const changeSwitch = (e) => {
-        e.preventDefault();
-
-        if (switcher === "Login") {
-            setSwitcher("Sign Up");
-            console.log(switcher);
-        } else {
-            setSwitcher("Login");
-            console.log(switcher);
-        }
-    }
 
     async function handleClick(e) {
         e.preventDefault();
