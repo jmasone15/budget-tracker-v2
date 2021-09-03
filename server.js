@@ -27,8 +27,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budgetTracker",
 });
 
 // Routes
-// Todo - Add budget route.
 app.use("/user", require("./routes/userRoutes"));
+app.use("/budget", require("./routes/budgetRoutes"));
 
 // Start Server
 app.listen(PORT, () => console.log(`Running on port: ${PORT}🌎`))

@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import AuthContext from './utils/AuthContext';
+import UserContext from './utils/UserContext';
 import axios from "axios";
 
 export default function Home() {
 
+    const { username } = useContext(UserContext);
     const history = useHistory();
     const { getLoggedIn } = useContext(AuthContext);
 
@@ -21,6 +23,17 @@ export default function Home() {
         }
     }
 
+    async function getGoals() {
+        if (username !== "") {
+            const goals = await axios.get(`/budget/${username}`);
+            console.log(goals.data);
+        }
+    }
+
+    useEffect(() => {
+        getGoals();
+    }, [username]);
+
     return (
         <div>
             <div className="header-container">
@@ -30,7 +43,7 @@ export default function Home() {
                 </div>
             </div>
             <div>
-                <h1 className="header">Home</h1>
+                <h1 className="header">Welcome {username}</h1>
             </div>
         </div>
     )
