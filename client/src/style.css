@@ -1,0 +1,66 @@
+.header {
+    color: blue;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.auth-header {
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    position: relative;
+}
+
+.text-input {
+    font-size: 20px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 10px;
+    font-size: 20px;
+    border: 2px solid rgb(75, 73, 73);
+    box-shadow: 2px 2px rgb(83, 83, 83);
+    padding: 10px;
+}
+
+.auth-button {
+    width: fit-content;
+    margin: 10px 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.login-switcher {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+}
+
+.button-switcher {
+    font-size: 30px;
+    margin: 5px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button-switcher-selected {
+    background-color: blue;
+    color: white;
+    font-size: 30px;
+    margin: 5px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
